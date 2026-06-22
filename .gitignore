@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local source assets (deployed copies are in public/)
+/PictureOfMe.JPG
+/PictureOfMe.jpg
+/Lum_Joshua_Resume_Projects.pdf
+/Screenshot*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
