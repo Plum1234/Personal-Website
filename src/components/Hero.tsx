@@ -7,19 +7,14 @@ export function Hero() {
         <div className="relative shrink-0">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-red-500/30 to-zinc-700/30 blur-sm" />
           <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-zinc-800 sm:h-48 sm:w-48">
-            {/* Native img so object-position + scale respond to site.ts edits */}
-            <img
-              src={site.headshot}
-              alt={site.name}
-              draggable={false}
-              className="absolute max-w-none object-cover"
+            <div
+              role="img"
+              aria-label={site.name}
+              className="absolute inset-0 bg-no-repeat"
               style={{
-                width: `${site.headshotScale * 100}%`,
-                height: `${site.headshotScale * 100}%`,
-                left: "50%",
-                top: "50%",
-                transform: "translate(-50%, -50%)",
-                objectPosition: site.headshotPosition,
+                backgroundImage: `url(${site.headshot})`,
+                backgroundSize: `${site.headshotZoom}%`,
+                backgroundPosition: site.headshotPosition,
               }}
             />
           </div>

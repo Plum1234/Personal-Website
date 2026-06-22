@@ -7,11 +7,12 @@ export const site = {
   github: "https://github.com/Plum1234",
   resumeUrl: "/resume.pdf",
   headshot: "/images/headshot.jpg",
-  // Scale > 1 zooms in so position values actually move the crop.
-  // Position: first value = horizontal (higher = show more right side of photo),
-  // second value = vertical (higher = show more bottom of photo).
-  headshotScale: 1.3,
-  headshotPosition: "52% 38%",
+  // Zoom (% of the circle). 100 = no zoom, 130 = zoomed in 30%.
+  headshotZoom: 130,
+  // Pan the photo inside the circle. Change these and refresh — you'll see it move.
+  // Horizontal: lower = you move right, higher = you move left.
+  // Vertical: lower = you move down, higher = you move up.
+  headshotPosition: "55% 38%",
 
   bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I'm love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered products as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
 
