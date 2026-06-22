@@ -13,8 +13,9 @@ export function Hero() {
               alt={site.name}
               fill
               priority
+              unoptimized
               sizes="(max-width: 640px) 160px, 192px"
-              className="object-cover object-[center_20%]"
+              className="object-cover object-center"
             />
           </div>
         </div>
