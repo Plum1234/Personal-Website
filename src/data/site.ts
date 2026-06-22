@@ -8,7 +8,7 @@ export const site = {
   resumeUrl: "/resume.pdf",
   headshot: "/images/headshot.jpg",
 
-  bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I'm love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered features as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
+  bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I'm love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered products as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
 
   badges: [
     "8VC Engineering Fellow",
@@ -22,7 +22,6 @@ export const site = {
     detail: "Viterbi School of Engineering & Marshall School of Business",
     degree: "B.S. Computer Science and Business Administration",
     graduation: "May 2026",
-    gpa: "3.72",
     leadership: [
       "Head Peer Academic Leader",
       "Chinese American Student Association (President)",

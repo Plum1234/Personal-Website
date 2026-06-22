@@ -27,7 +27,7 @@ export function About() {
           <p className="mt-2 text-zinc-300">{site.education.school}</p>
           <p className="text-sm text-zinc-500">{site.education.detail}</p>
           <p className="mt-1 text-sm text-zinc-400">
-            {site.education.degree} · GPA {site.education.gpa} · {site.education.graduation}
+            {site.education.degree} · {site.education.graduation}
           </p>
           <ul className="mt-4 space-y-1">
             {site.education.leadership.map((item) => (
