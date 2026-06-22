@@ -27,7 +27,7 @@ export function Projects() {
                       href={`https://youtu.be/${project.demo.youtubeId}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="shrink-0 rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition-colors hover:border-rose-600/40 hover:text-rose-300"
+                      className="shrink-0 rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition-colors hover:border-red-500/50 hover:text-red-400"
                     >
                       {project.demo.label}
                     </a>
@@ -52,7 +52,7 @@ export function Projects() {
                 <ul className="mt-4 space-y-2">
                   {project.highlights.map((h) => (
                     <li key={h} className="flex gap-2 text-sm text-zinc-500">
-                      <span className="text-rose-400/70">→</span>
+                      <span className="text-red-600">→</span>
                       {h}
                     </li>
                   ))}
