@@ -15,11 +15,11 @@ export function Experience() {
               key={job.company}
               className="relative pl-8 before:absolute before:left-0 before:top-2 before:h-full before:w-px before:bg-zinc-800 last:before:hidden"
             >
-              <div className="absolute left-0 top-2 h-2 w-2 -translate-x-[3px] rounded-full bg-teal-500" />
+              <div className="absolute left-0 top-2 h-2 w-2 -translate-x-[3px] rounded-full bg-red-500" />
 
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <h3 className="text-lg font-semibold text-zinc-100">{job.company}</h3>
-                <span className="font-mono text-xs text-teal-500/80">{job.tag}</span>
+                <span className="font-mono text-xs text-red-500/80">{job.tag}</span>
               </div>
               <p className="mt-1 text-sm text-zinc-400">{job.role}</p>
               <p className="text-sm text-zinc-600">

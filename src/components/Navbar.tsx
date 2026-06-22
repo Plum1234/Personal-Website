@@ -25,7 +25,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-mono text-sm font-medium text-zinc-100 transition-colors hover:text-teal-400"
+          className="font-mono text-sm font-medium text-zinc-100 transition-colors hover:text-red-400"
         >
           jl
         </a>
@@ -46,7 +46,7 @@ export function Navbar() {
               href={site.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition-colors hover:border-teal-500/50 hover:text-teal-400"
+              className="rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition-colors hover:border-red-500/50 hover:text-red-400"
             >
               Resume
             </a>
@@ -88,7 +88,7 @@ export function Navbar() {
                 href={site.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-teal-400"
+                className="text-sm text-red-400"
               >
                 Resume
               </a>

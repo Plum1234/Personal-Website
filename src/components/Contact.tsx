@@ -11,7 +11,7 @@ export function Contact() {
           <div>
             <a
               href={`mailto:${site.email}`}
-              className="text-2xl font-medium text-zinc-100 transition-colors hover:text-teal-400"
+              className="text-2xl font-medium text-zinc-100 transition-colors hover:text-red-400"
             >
               {site.email}
             </a>
@@ -39,7 +39,7 @@ export function Contact() {
               href={site.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-teal-600 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-teal-500"
+              className="rounded-full bg-red-700 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-red-600"
             >
               Resume
             </a>

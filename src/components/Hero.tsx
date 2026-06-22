@@ -6,7 +6,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center px-6 pt-24 pb-16">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 md:flex-row md:gap-16">
         <div className="relative shrink-0">
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-teal-500/30 to-zinc-700/30 blur-sm" />
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-red-500/30 to-zinc-700/30 blur-sm" />
           <Image
             src={site.headshot}
             alt={site.name}
@@ -18,7 +18,7 @@ export function Hero() {
         </div>
 
         <div className="flex-1 text-center md:text-left">
-          <p className="mb-2 font-mono text-sm text-teal-400">Hello, I&apos;m</p>
+          <p className="mb-2 font-mono text-sm text-red-400">Hello, I&apos;m</p>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
             {site.name}
           </h1>
@@ -29,7 +29,7 @@ export function Hero() {
               href={site.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-teal-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-teal-500"
+              className="rounded-full bg-red-700 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-600"
             >
               Download Resume
             </a>
