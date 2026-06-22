@@ -6,15 +6,14 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 md:flex-row md:gap-16">
         <div className="relative shrink-0">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-red-500/30 to-zinc-700/30 blur-sm" />
-          <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-zinc-800 sm:h-48 sm:w-48">
-            <div
-              role="img"
-              aria-label={site.name}
-              className="absolute inset-0 bg-no-repeat"
+          <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-zinc-800 bg-zinc-900 sm:h-48 sm:w-48">
+            <img
+              src={site.headshot}
+              alt={site.name}
+              draggable={false}
+              className="h-full w-full origin-center object-contain"
               style={{
-                backgroundImage: `url(${site.headshot})`,
-                backgroundSize: `${site.headshotZoom}%`,
-                backgroundPosition: site.headshotPosition,
+                transform: `translate(${site.headshotPanX}%, ${site.headshotPanY}%) scale(${site.headshotScale})`,
               }}
             />
           </div>

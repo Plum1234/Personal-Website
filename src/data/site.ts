@@ -6,14 +6,11 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
   resumeUrl: "/resume.pdf",
-  headshot: "/images/headshot.jpg",
-  // Zoom (% of the circle). 100 = no zoom, 130 = zoomed in 30%.
-  headshotZoom: 130,
-  // Pan the photo inside the circle. Change these and refresh — you'll see it move.
-  // Horizontal: lower = you move right, higher = you move left.
-  // Vertical: lower = you move down, higher = you move up.
-  headshotPosition: "55% 38%",
-
+  headshot: "/images/PictureOfMe.jpg",
+  // Pan/zoom the full photo inside the circle (save + refresh)
+  headshotScale: 2.5,
+  headshotPanX: -3,
+  headshotPanY: 0,
   bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I'm love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered products as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
 
   badges: [

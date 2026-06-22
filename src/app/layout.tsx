@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "CS + Business @ USC. Interested in Product, BizOps & Engineering.",
     type: "website",
-    images: ["/images/headshot.jpg"],
+    images: ["/images/PictureOfMe.jpg"],
   },
 };
 
