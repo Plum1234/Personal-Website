@@ -7,6 +7,7 @@ export const site = {
   github: "https://github.com/Plum1234",
   resumeUrl: "/resume.pdf",
   headshot: "/images/headshot.jpg",
+  headshotPosition: "58% 38%",
 
   bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I'm love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered products as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
 

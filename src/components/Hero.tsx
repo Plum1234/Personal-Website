@@ -15,7 +15,8 @@ export function Hero() {
               priority
               unoptimized
               sizes="(max-width: 640px) 160px, 192px"
-              className="object-cover object-center"
+              className="object-cover"
+              style={{ objectPosition: site.headshotPosition }}
             />
           </div>
         </div>
