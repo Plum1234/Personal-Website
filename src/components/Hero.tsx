@@ -7,14 +7,16 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 md:flex-row md:gap-16">
         <div className="relative shrink-0">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-red-500/30 to-zinc-700/30 blur-sm" />
-          <Image
-            src={site.headshot}
-            alt={site.name}
-            width={192}
-            height={192}
-            priority
-            className="relative h-40 w-40 rounded-full border-2 border-zinc-800 object-cover sm:h-48 sm:w-48"
-          />
+          <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-zinc-800 sm:h-48 sm:w-48">
+            <Image
+              src={site.headshot}
+              alt={site.name}
+              fill
+              priority
+              sizes="(max-width: 640px) 160px, 192px"
+              className="object-cover object-[center_20%]"
+            />
+          </div>
         </div>
 
         <div className="flex-1 text-center md:text-left">
