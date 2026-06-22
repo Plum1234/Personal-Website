@@ -34,7 +34,7 @@ export const site = {
   experience: [
     {
       company: "Campus",
-      tag: "Series B · 8VC / Founder's Fund",
+      tag: "Series B · 8VC / General Catalyst / Founder's Fund",
       role: "Software Engineering Intern (8VC Engineering Fellow)",
       location: "New York, NY",
       dates: "May 2026 – August 2026",
@@ -52,7 +52,7 @@ export const site = {
     },
     {
       company: "Uthana",
-      tag: "Seed · A16Z portfolio",
+      tag: "Seed · A16Z",
       role: "Product & Engineering Intern",
       location: "Los Angeles, CA",
       dates: "May 2025 – August 2025",
