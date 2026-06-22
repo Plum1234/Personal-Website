@@ -25,7 +25,8 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-mono text-sm font-medium text-zinc-100 transition-colors hover:text-red-400"
+          aria-label="Joshua Lum home"
+          className="font-mono text-sm font-semibold tracking-tight text-zinc-100 transition-colors hover:text-red-400"
         >
           jl
         </a>
