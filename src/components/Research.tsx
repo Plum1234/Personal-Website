@@ -16,15 +16,15 @@ export function Research() {
               rel="noopener noreferrer"
               className="group block rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 transition-colors hover:border-zinc-700 hover:bg-zinc-900/50"
             >
-              <p className="font-mono text-xs text-red-500/80">{paper.venue}</p>
-              <h3 className="mt-2 text-lg font-medium text-zinc-100 group-hover:text-red-400 transition-colors">
+              <p className="font-mono text-xs text-rose-300/70">{paper.venue}</p>
+              <h3 className="mt-2 text-lg font-medium text-zinc-100 transition-colors group-hover:text-rose-300">
                 {paper.title}
               </h3>
               <p className="mt-1 text-sm text-zinc-600">{paper.authors}</p>
               <p className="mt-3 text-sm leading-relaxed text-zinc-500">
                 {paper.description}
               </p>
-              <p className="mt-3 text-sm text-red-500/70 group-hover:text-red-400">
+              <p className="mt-3 text-sm text-rose-300/60 group-hover:text-rose-300">
                 Read paper →
               </p>
             </a>

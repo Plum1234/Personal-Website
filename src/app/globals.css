@@ -3,7 +3,7 @@
 :root {
   --background: #09090b;
   --foreground: #d4d4d8;
-  --accent: #b91c1c;
+  --accent: #c48484;
 }
 
 @theme inline {
@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-  background: rgba(185, 28, 28, 0.35);
+  background: rgba(196, 132, 132, 0.25);
   color: #fafafa;
 }
 

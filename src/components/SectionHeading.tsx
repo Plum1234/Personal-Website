@@ -13,7 +13,7 @@ export function SectionHeading({
       {subtitle && (
         <p className="mt-2 text-zinc-400">{subtitle}</p>
       )}
-      <div className="mt-4 h-px w-12 bg-red-500/60" />
+      <div className="mt-4 h-px w-12 bg-rose-400/40" />
     </div>
   );
 }
