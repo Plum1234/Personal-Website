@@ -15,7 +15,6 @@ export function Contact() {
             >
               {site.email}
             </a>
-            <p className="mt-2 text-sm text-zinc-600">{site.phone}</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
