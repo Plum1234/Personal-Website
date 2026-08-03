@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { site } from "@/data/site";
 import { SectionHeading } from "./SectionHeading";
 import { YouTubeEmbed } from "./YouTubeEmbed";
@@ -35,30 +34,21 @@ export function Experience() {
                 ))}
               </ul>
 
-              {"media" in job && job.media && (
-                <div className="mt-6">
-                  {job.media.type === "image" && (
-                    <div className="overflow-hidden rounded-xl border border-zinc-800">
-                      <Image
-                        src={job.media.src}
-                        alt={job.media.alt}
-                        width={1200}
-                        height={700}
-                        className="w-full object-cover"
+              {"media" in job && job.media && job.media.length > 0 && (
+                <div className="mt-6 space-y-6">
+                  {job.media.map((item) => (
+                    <div key={item.caption}>
+                      <YouTubeEmbed
+                        videoId={item.youtubeId}
+                        title={item.caption}
                       />
+                      {item.caption && (
+                        <p className="mt-2 text-center text-xs text-zinc-600">
+                          {item.caption}
+                        </p>
+                      )}
                     </div>
-                  )}
-                  {job.media.type === "video" && (
-                    <YouTubeEmbed
-                      videoId={job.media.youtubeId}
-                      title={job.media.caption}
-                    />
-                  )}
-                  {job.media.caption && (
-                    <p className="mt-2 text-center text-xs text-zinc-600">
-                      {job.media.caption}
-                    </p>
-                  )}
+                  ))}
                 </div>
               )}
             </div>

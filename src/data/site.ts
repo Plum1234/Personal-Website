@@ -2,6 +2,7 @@ export const site = {
   name: "Joshua Lum",
   tagline: "CS + Business @ USC · Interested in Product, BizOps & Engineering",
   email: "jalum@usc.edu",
+  phone: "(702) 793-5286",
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
   resumeUrl: "/resume.pdf",
@@ -33,21 +34,27 @@ export const site = {
   experience: [
     {
       company: "Campus",
-      tag: "Series B · 8VC / General Catalyst / Founder's Fund",
+      tag: "Series B · 8VC / Founder's Fund",
       role: "Software Engineering Intern (8VC Engineering Fellow)",
       location: "New York, NY",
       dates: "May 2026 – August 2026",
       highlights: [
-        "1 of 30 selected 8VC Engineering Fellows, building AI-powered features to enhance student learning.",
-        "Shipped a DM-native AI assistant (\"Sam\") across 4 services — Go backend, React frontend, Go WebSocket server, and Python/LangChain — enabling replies and proactive outreach in student DMs.",
-        "Improved AI response quality by updating model metadata on assignment info, adding file upload support, and implementing tracing through Datadog.",
+        "Grew Sam (AI tutor) usage from 50 → 350 daily active users by shipping DM integration, file upload, and assignment context across a 4-service stack (Go backend, React frontend, Go WebSocket server, Python/LangChain).",
+        "Built Sam's DM provisioning system (Postgres advisory locks, eligibility sweep cron) and extended it into a proactive outreach flow that confirms schedules via LLM tool-calling with auto-escalation to coaches.",
+        "Built a scalable Dagster pipeline to process 1,000+ student-coach transcripts into a compliant GCS bucket, applying LDA, BERTopic, and LLM-based extraction to surface recurring themes in student challenges.",
       ],
-      media: {
-        type: "image" as const,
-        src: "/images/sam-dm.png",
-        alt: "Sam AI assistant DM interface on Campus",
-        caption: "Sam — Campus AI Buddy in student DMs",
-      },
+      media: [
+        {
+          type: "video" as const,
+          youtubeId: "zrPAAYbZT6Y",
+          caption: "Sam in the DMs — Campus AI Buddy",
+        },
+        {
+          type: "video" as const,
+          youtubeId: "MD009cPA7vI",
+          caption: "Student/coach transcript risk analysis",
+        },
+      ],
     },
     {
       company: "Uthana",
@@ -58,13 +65,14 @@ export const site = {
       highlights: [
         "Launched a live generative AI animation demo at SIGGRAPH 2025, viewed by 2,000+ game developers and ML researchers.",
         "Built an automated Python workflow that processed and ranked 10K+ motion prompts using frequency and embedding-based cosine distance to generate monthly top-150 MoCap batches.",
-        "Reported on 10+ companies and technologies in AI animation to shape product features and partnerships.",
       ],
-      media: {
-        type: "video" as const,
-        youtubeId: "ouao2Pc6XTI",
-        caption: "SIGGRAPH 2025 — live real-time generative animation demo",
-      },
+      media: [
+        {
+          type: "video" as const,
+          youtubeId: "ouao2Pc6XTI",
+          caption: "SIGGRAPH 2025 — live real-time generative animation demo",
+        },
+      ],
     },
     {
       company: "Tamagotchi Lab, USC",
