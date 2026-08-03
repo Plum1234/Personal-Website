@@ -5,7 +5,7 @@ export const site = {
   phone: "(702) 793-5286",
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Lum_Joshua_Resume_FDE.pdf",
   headshot: "/images/PictureOfMe.jpg",
   // Pan/zoom the full photo inside the circle (save + refresh)
   headshotScale: 2.5,
