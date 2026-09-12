@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 import { site } from "@/data/site";
+import { fadeUp } from "./FadeIn";
 
 function IconLink({
   href,
@@ -37,12 +39,16 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
+    <motion.nav
+      variants={fadeUp}
+      custom={0.16}
+      initial="hidden"
+      animate="visible"
+      className={`fixed left-0 right-0 z-50 transition-[padding,background-color,backdrop-filter] duration-300 ${
         scrolled ? "bg-background/90 py-4 backdrop-blur-md" : "py-12 sm:py-16"
       }`}
     >
-      <div className="animate-fade-up mx-auto flex max-w-2xl items-center justify-between gap-3 px-5">
+      <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-5">
         <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <h1 className="whitespace-nowrap text-xl font-bold tracking-normal min-[375px]:text-2xl sm:text-3xl">
             {site.name}
@@ -125,6 +131,6 @@ export function Navbar() {
           </IconLink>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
