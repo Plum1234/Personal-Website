@@ -4,12 +4,12 @@ import { FadeIn } from "./FadeIn";
 export function Experience() {
   return (
     <section id="work">
-      <FadeIn>
+      <FadeIn delay={520}>
         <div className="space-y-4 pb-16 text-left">
           <div className="text-2xl font-normal">Work</div>
           <div className="space-y-0">
-            {site.work.map((job, i) => (
-              <FadeIn key={job.company} delay={i * 60}>
+            {site.work.map((job) => (
+              <div key={job.company}>
                 <a
                   href={job.href}
                   target="_blank"
@@ -34,7 +34,7 @@ export function Experience() {
                   </div>
                 </a>
                 <div className="border-b border-dashed border-ink" />
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>

@@ -4,12 +4,12 @@ import { FadeIn } from "./FadeIn";
 export function Involvements() {
   return (
     <section id="involvements">
-      <FadeIn>
+      <FadeIn delay={720}>
         <div className="space-y-4 pb-16 text-left">
           <div className="text-2xl font-normal">Involvements</div>
           <div className="space-y-0">
-            {site.involvements.map((item, i) => (
-              <FadeIn key={item.org} delay={i * 60}>
+            {site.involvements.map((item) => (
+              <div key={item.org}>
                 <a
                   href={item.href}
                   target="_blank"
@@ -34,7 +34,7 @@ export function Involvements() {
                   </div>
                 </a>
                 <div className="border-b border-dashed border-ink" />
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>

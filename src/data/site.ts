@@ -11,7 +11,14 @@ export const site = {
 
   about: [
     {
-      text: "Based in Los Angeles. Currently Software Strategy Group Associate at EY-P.",
+      parts: [
+        { text: "Based in Los Angeles. Currently " },
+        {
+          text: "Software Strategy Group",
+          href: "https://www.ey.com/en_us/services/strategy/software-strategy-consulting",
+        },
+        { text: " Associate at EY-P." },
+      ],
     },
     {
       parts: [
@@ -52,7 +59,7 @@ export const site = {
       company: "EY-Parthenon",
       role: "Associate",
       dates: "2026",
-      href: "https://www.ey.com/en_us/services/strategy/software-strategy-consulting",
+      href: "https://www.ey.com/en_us/services/strategy/parthenon",
       logo: "/logos/EYP.png",
     },
     {

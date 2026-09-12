@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { site } from "@/data/site";
 import { FadeIn } from "./FadeIn";
 
@@ -10,52 +10,73 @@ export function Projects() {
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
 
-  const updateButtons = () => {
+  const updateButtons = useCallback(() => {
     const el = scrollerRef.current;
     if (!el) return;
-    const { scrollLeft, scrollWidth, offsetWidth } = el;
-    if (scrollWidth <= offsetWidth + 1) {
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    if (scrollWidth <= clientWidth + 1) {
       setCanLeft(false);
       setCanRight(false);
       return;
     }
-    setCanLeft(Math.abs(scrollLeft) > 4);
-    setCanRight(Math.abs(scrollLeft + offsetWidth - scrollWidth) > 4);
-  };
+    setCanLeft(scrollLeft > 4);
+    setCanRight(scrollLeft + clientWidth < scrollWidth - 4);
+  }, []);
 
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el) return;
+
     updateButtons();
-    el.addEventListener("scroll", updateButtons, { passive: true });
+
+    const onScroll = () => updateButtons();
+    // Map vertical wheel/trackpad to horizontal scroll when hovering the carousel.
+    const onWheel = (event: WheelEvent) => {
+      if (el.scrollWidth <= el.clientWidth + 1) return;
+
+      const mostlyVertical = Math.abs(event.deltaY) >= Math.abs(event.deltaX);
+      const delta = mostlyVertical ? event.deltaY : event.deltaX;
+      if (delta === 0) return;
+
+      const max = el.scrollWidth - el.clientWidth;
+      const atStart = el.scrollLeft <= 0 && delta < 0;
+      const atEnd = el.scrollLeft >= max - 1 && delta > 0;
+      if (atStart || atEnd) return;
+
+      event.preventDefault();
+      el.scrollLeft += delta;
+    };
+
+    el.addEventListener("scroll", onScroll, { passive: true });
+    el.addEventListener("wheel", onWheel, { passive: false });
     window.addEventListener("resize", updateButtons);
+
+    const ro = new ResizeObserver(() => updateButtons());
+    ro.observe(el);
     const t = window.setTimeout(updateButtons, 150);
+
     return () => {
-      el.removeEventListener("scroll", updateButtons);
+      el.removeEventListener("scroll", onScroll);
+      el.removeEventListener("wheel", onWheel);
       window.removeEventListener("resize", updateButtons);
+      ro.disconnect();
       window.clearTimeout(t);
     };
-  }, []);
+  }, [updateButtons]);
 
   const scrollByDir = (dir: "left" | "right") => {
     const el = scrollerRef.current;
     if (!el) return;
-    const amount = el.offsetWidth * 0.8;
+    const amount = Math.max(280, el.clientWidth * 0.8);
     el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
   };
-
-  const maskImage = `linear-gradient(to right, ${
-    canLeft ? "transparent 0%, black 40px" : "black 0%"
-  }, black ${canLeft || canRight ? "calc(100% - 40px)" : "100%"}, ${
-    canRight ? "transparent 100%" : "black 100%"
-  })`;
 
   return (
     <section
       id="projects"
       className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-24"
     >
-      <FadeIn>
+      <FadeIn delay={900}>
         <div className="mx-auto w-full max-w-5xl space-y-4 px-5">
           <h2 className="text-center text-3xl font-normal">Projects</h2>
 
@@ -89,27 +110,37 @@ export function Projects() {
               </svg>
             </button>
 
+            {/* Edge fades sit above content but don't steal scroll/drag */}
+            <div
+              aria-hidden
+              className={`pointer-events-none absolute inset-y-0 left-0 z-20 w-10 bg-gradient-to-r from-white to-transparent transition-opacity ${
+                canLeft ? "opacity-100" : "opacity-0"
+              }`}
+            />
+            <div
+              aria-hidden
+              className={`pointer-events-none absolute inset-y-0 right-0 z-20 w-10 bg-gradient-to-l from-white to-transparent transition-opacity ${
+                canRight ? "opacity-100" : "opacity-0"
+              }`}
+            />
+
             <div
               ref={scrollerRef}
               tabIndex={0}
-              className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 py-2"
-              style={{
-                scrollBehavior: "smooth",
-                WebkitOverflowScrolling: "touch",
-                maskImage,
-                WebkitMaskImage: maskImage,
-              }}
+              role="region"
+              aria-label="Projects carousel"
+              className="projects-scroller flex gap-4 overflow-x-auto px-1 py-2 pb-3"
             >
               {site.projects.map((project) => (
                 <div
                   key={project.title}
-                  className="w-full min-w-[240px] max-w-[260px] shrink-0 snap-center"
+                  className="w-[260px] shrink-0"
                 >
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-[#120315] bg-white transition-all duration-300 hover:bg-zinc-50"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-[#120315] bg-white transition-colors duration-300 hover:bg-zinc-50"
                   >
                     <div className="aspect-[13/8] overflow-hidden bg-zinc-100">
                       <img

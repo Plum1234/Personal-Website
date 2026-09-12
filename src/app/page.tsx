@@ -16,7 +16,9 @@ export default function Home() {
         <Projects />
       </main>
       <footer className="mx-auto max-w-2xl px-5 pb-8 text-center text-xs text-muted">
-        {site.footer}
+        <span lang="zh" title="conviction">
+          {site.footer}
+        </span>
       </footer>
     </div>
   );
