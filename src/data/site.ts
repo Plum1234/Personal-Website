@@ -48,7 +48,7 @@ export const site = {
       company: "EY-Parthenon",
       role: "Associate",
       dates: "2026",
-      href: "https://www.ey.com/en_us/services/strategy/ey-parthenon",
+      href: "https://www.ey.com/en_us/services/strategy/software-strategy-consulting",
       logo: "/logos/EYP.png",
     },
     {
