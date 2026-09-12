@@ -7,7 +7,7 @@ export const site = {
 
   about: [
     {
-      text: "Based in Los Angeles. currently software strategy group associate at ey-p.",
+      text: "Based in Los Angeles. Currently Software Strategy Group Associate at EY-P.",
     },
     {
       parts: [
@@ -27,10 +27,10 @@ export const site = {
           href: "https://www.uthana.com/",
         },
         {
-          text: ". I studied CS+Business at USC, where I conducted interpretability research published to ",
+          text: ". I studied CS + Business at USC, where I conducted interpretability research published to ",
         },
         {
-          text: "Calm @ NeurIPS",
+          text: "CaLM @ NeurIPS",
           href: "https://arxiv.org/abs/2410.21353",
         },
         {
@@ -39,7 +39,7 @@ export const site = {
       ],
     },
     {
-      text: "Always happy to chat.",
+      text: "Always love to chat, feel free to reach out!",
     },
   ],
 

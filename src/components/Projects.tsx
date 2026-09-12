@@ -130,7 +130,7 @@ export function Projects() {
                       >
                         {project.badge}
                       </span>
-                      <p className="mt-1 line-clamp-5 text-xs leading-relaxed text-zinc-500 lowercase">
+                      <p className="mt-1 line-clamp-5 text-xs leading-relaxed text-zinc-500">
                         {project.description}
                       </p>
                     </div>

@@ -39,7 +39,7 @@ export function About() {
   return (
     <section id="about">
       <FadeIn>
-        <div className="space-y-8 pb-12 pt-16 text-left lowercase">
+        <div className="space-y-8 pb-12 pt-16 text-left">
           {site.about.map((item, i) => (
             <AboutParagraph key={i} item={item} delay={i * 80} />
           ))}
