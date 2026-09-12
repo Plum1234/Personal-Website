@@ -4,6 +4,10 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
   resumeUrl: "/Lum_Joshua_Resume_Grad.pdf",
+  url: "https://joshualum.vercel.app",
+  description:
+    "Software Strategy Group Associate at EY-Parthenon. 8VC Engineering Fellow. CS + Business @ USC.",
+  footer: "信念",
 
   about: [
     {

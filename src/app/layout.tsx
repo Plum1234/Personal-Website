@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { site } from "@/data/site";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -10,16 +11,44 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joshualum.vercel.app"),
-  title: "Joshua Lum",
-  description:
-    "CS + Business @ USC. Interested in Product, BizOps & Engineering. AI/ML research, full-stack development, and building products that ship.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.name,
+    template: `%s · ${site.name}`,
+  },
+  description: site.description,
+  applicationName: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  keywords: [
+    "Joshua Lum",
+    "EY-Parthenon",
+    "8VC",
+    "USC",
+    "software strategy",
+    "engineering",
+    "AI",
+    "ML",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Joshua Lum",
-    description:
-      "CS + Business @ USC. Interested in Product, BizOps & Engineering.",
+    title: site.name,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
+    locale: "en_US",
     type: "website",
-    images: ["/images/PictureOfMe.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

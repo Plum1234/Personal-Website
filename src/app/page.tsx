@@ -3,6 +3,7 @@ import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
 import { Involvements } from "@/components/Involvements";
 import { Projects } from "@/components/Projects";
+import { site } from "@/data/site";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <Projects />
       </main>
       <footer className="mx-auto max-w-2xl px-5 pb-8 text-center text-xs text-muted">
-        信念
+        {site.footer}
       </footer>
     </div>
   );
