@@ -3,12 +3,11 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { motion, type Variants } from "motion/react";
 
-/** Matches vishnukadaba.dev: blur + slight rise, soft ease. */
+/** Soft blur-fade in place (no translate) for nav and staggered items. */
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 10, filter: "blur(4px)" },
+  hidden: { opacity: 0, filter: "blur(4px)" },
   visible: (delay = 0) => ({
     opacity: 1,
-    y: 0,
     filter: "blur(0px)",
     transition: {
       duration: 0.8,
@@ -31,10 +30,9 @@ export const stagger: Variants = {
 
 /** Child item without custom delay (used inside stagger trees). */
 export const fadeUpItem: Variants = {
-  hidden: { opacity: 0, y: 10, filter: "blur(4px)" },
+  hidden: { opacity: 0, filter: "blur(4px)" },
   visible: {
     opacity: 1,
-    y: 0,
     filter: "blur(0px)",
     transition: {
       duration: 0.8,
