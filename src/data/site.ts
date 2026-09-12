@@ -1,6 +1,6 @@
 export const site = {
   name: "Joshua Lum",
-  email: "jalum@usc.edu",
+  email: "joshualum42@gmail.com",
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
   resumeUrl: "/Lum_Joshua_Resume_Grad.pdf",

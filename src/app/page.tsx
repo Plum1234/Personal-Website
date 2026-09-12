@@ -15,12 +15,7 @@ export default function Home() {
         <Projects />
       </main>
       <footer className="mx-auto max-w-2xl px-5 pb-8 text-center text-xs text-muted">
-        <a
-          href="/Lum_Joshua_Resume_Grad.pdf"
-          className="border-b border-dotted border-ink transition-opacity hover:opacity-60"
-        >
-          resume
-        </a>
+        © 2026
       </footer>
     </div>
   );
