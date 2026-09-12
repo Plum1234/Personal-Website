@@ -7,7 +7,7 @@ export const site = {
 
   about: [
     {
-      text: "Based in Los Angeles. currently software strategy group associate at ey-p",
+      text: "Based in Los Angeles. currently software strategy group associate at ey-p.",
     },
     {
       parts: [
@@ -32,6 +32,9 @@ export const site = {
         {
           text: "Calm @ NeurIPS",
           href: "https://arxiv.org/abs/2410.21353",
+        },
+        {
+          text: ".",
         },
       ],
     },
