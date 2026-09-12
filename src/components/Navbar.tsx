@@ -45,9 +45,17 @@ export function Navbar() {
         }`}
       >
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-5">
-          <h1 className="whitespace-nowrap text-xl font-bold tracking-normal min-[375px]:text-2xl sm:text-3xl">
-            {site.name}
-          </h1>
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+            <h1 className="whitespace-nowrap text-xl font-bold tracking-normal min-[375px]:text-2xl sm:text-3xl">
+              {site.name}
+            </h1>
+            <img
+              src="/images/seal.png"
+              alt=""
+              aria-hidden="true"
+              className="h-6 w-6 shrink-0 select-none sm:h-7 sm:w-7"
+            />
+          </div>
           <div className="flex shrink-0 items-center gap-1 sm:gap-2">
             <IconLink href={site.github} label="GitHub">
               <svg

@@ -15,7 +15,7 @@ export default function Home() {
         <Projects />
       </main>
       <footer className="mx-auto max-w-2xl px-5 pb-8 text-center text-xs text-muted">
-        © 2026
+        信念
       </footer>
     </div>
   );
