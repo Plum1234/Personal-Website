@@ -44,8 +44,8 @@ export function Navbar() {
       custom={0.16}
       initial="hidden"
       animate="visible"
-      className={`fixed left-0 right-0 z-50 transition-[padding,background-color,backdrop-filter] duration-300 ${
-        scrolled ? "bg-background/90 py-4 backdrop-blur-md" : "py-12 sm:py-16"
+      className={`fixed left-0 right-0 z-50 transition-[padding,background-color] duration-300 ${
+        scrolled ? "bg-background py-4" : "py-12 sm:py-16"
       }`}
     >
       <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-5">

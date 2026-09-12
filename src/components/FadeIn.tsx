@@ -14,6 +14,8 @@ export const fadeUp: Variants = {
       delay,
       ease: [0.14, 0.61, 0.1, 1.02],
     },
+    // Drop filter after the fade so scroll doesn't keep a soft blur.
+    transitionEnd: { filter: "none" },
   }),
 };
 
@@ -38,6 +40,7 @@ export const fadeUpItem: Variants = {
       duration: 0.8,
       ease: [0.14, 0.61, 0.1, 1.02],
     },
+    transitionEnd: { filter: "none" },
   },
 };
 
