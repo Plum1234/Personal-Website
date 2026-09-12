@@ -1,43 +1,50 @@
 import { site } from "@/data/site";
-import { SectionHeading } from "./SectionHeading";
+import { FadeIn } from "./FadeIn";
+
+type AboutPart = { text: string; href?: string };
+
+function AboutParagraph({
+  item,
+  delay,
+}: {
+  item: { text?: string; parts?: readonly AboutPart[] };
+  delay: number;
+}) {
+  return (
+    <FadeIn delay={delay}>
+      <p className="text-sm md:text-base">
+        {"parts" in item && item.parts
+          ? item.parts.map((part, i) =>
+              part.href ? (
+                <a
+                  key={`${part.text}-${i}`}
+                  href={part.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b-2 border-dotted border-ink transition-opacity hover:opacity-60"
+                >
+                  {part.text}
+                </a>
+              ) : (
+                <span key={`${part.text}-${i}`}>{part.text}</span>
+              ),
+            )
+          : item.text}
+      </p>
+    </FadeIn>
+  );
+}
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-24">
-      <div className="mx-auto max-w-5xl">
-        <SectionHeading title="About" subtitle="Background & expertise" />
-
-        <p className="max-w-3xl text-lg leading-relaxed text-zinc-400">
-          {site.bio}
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-2">
-          {site.badges.map((badge) => (
-            <span
-              key={badge}
-              className="rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 font-mono text-xs text-zinc-400"
-            >
-              {badge}
-            </span>
+    <section id="about">
+      <FadeIn>
+        <div className="space-y-8 pb-12 pt-16 text-left lowercase">
+          {site.about.map((item, i) => (
+            <AboutParagraph key={i} item={item} delay={i * 80} />
           ))}
         </div>
-
-        <div className="mt-12 rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8">
-          <h3 className="font-semibold text-zinc-200">Education</h3>
-          <p className="mt-2 text-zinc-300">{site.education.school}</p>
-          <p className="text-sm text-zinc-500">{site.education.detail}</p>
-          <p className="mt-1 text-sm text-zinc-400">
-            {site.education.degree} · {site.education.graduation}
-          </p>
-          <ul className="mt-4 space-y-1">
-            {site.education.leadership.map((item) => (
-              <li key={item} className="text-sm text-zinc-500">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

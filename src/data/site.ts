@@ -1,163 +1,146 @@
 export const site = {
   name: "Joshua Lum",
-  tagline: "CS + Business @ USC · Interested in Product, BizOps & Engineering",
   email: "jalum@usc.edu",
-  phone: "(702) 793-5286",
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
-  resumeUrl: "/Lum_Joshua_Resume_FDE.pdf",
-  headshot: "/images/PictureOfMe.jpg",
-  // Pan/zoom the full photo inside the circle (save + refresh)
-  headshotScale: 2.5,
-  headshotPanX: -3,
-  headshotPanY: 0,
-  bio: `I'm a Computer Science and Business Administration graduate from USC, currently based in NYC. I love learning, and it's brought me deeper into the field than I ever expected. Whether it's co-authoring research on ML interpretability or building AI-powered products as an 8VC Fellow, I'm always taking the hands-on approach to growth. Right now, I'm interested in working at roles around the intersection of Product, Business, and Engineering.`,
+  resumeUrl: "/Lum_Joshua_Resume_Grad.pdf",
 
-  badges: [
-    "8VC Engineering Fellow",
-    "NeurIPS 2024 (CaLM)",
-    "Magna Cum Laude",
-    "Dean's List",
+  about: [
+    {
+      text: "Based in Los Angeles. currently software strategy group associate at ey-p",
+    },
+    {
+      parts: [
+        { text: "I'm also an " },
+        {
+          text: "8VC Engineering Fellow",
+          href: "https://www.8vc.com/fellows/joshua-lum",
+        },
+        { text: " who worked at " },
+        {
+          text: "Campus",
+          href: "https://campus.edu/",
+        },
+        { text: " and " },
+        {
+          text: "Uthana",
+          href: "https://www.uthana.com/",
+        },
+        {
+          text: ". I studied CS+Business at USC, where I conducted interpretability research published to ",
+        },
+        {
+          text: "Calm @ NeurIPS",
+          href: "https://arxiv.org/abs/2410.21353",
+        },
+      ],
+    },
+    {
+      text: "Always happy to chat.",
+    },
   ],
 
-  education: {
-    school: "University of Southern California",
-    detail: "Viterbi School of Engineering & Marshall School of Business",
-    degree: "B.S. Computer Science and Business Administration",
-    graduation: "May 2026",
-    leadership: [
-      "Head Peer Academic Leader",
-      "Chinese American Student Association (President)",
-    ],
-  },
-
-  experience: [
+  work: [
+    {
+      company: "EY-Parthenon",
+      role: "Associate",
+      dates: "2026",
+      href: "https://www.ey.com/en_us/services/strategy/ey-parthenon",
+      logo: "/logos/EYP.png",
+    },
+    {
+      company: "8VC",
+      role: "Engineering Fellow",
+      dates: "2026",
+      href: "https://8vc.com/",
+      logo: "/logos/8vc.png",
+    },
     {
       company: "Campus",
-      tag: "Series B · 8VC / Founder's Fund",
-      role: "Software Engineering Intern (8VC Engineering Fellow)",
-      location: "New York, NY",
-      dates: "May 2026 – August 2026",
-      highlights: [
-        "Grew Sam (AI tutor) usage from 50 → 350 daily active users by shipping DM integration, file upload, and assignment context across a 4-service stack (Go backend, React frontend, Go WebSocket server, Python/LangChain).",
-        "Built Sam's DM provisioning system (Postgres advisory locks, eligibility sweep cron) and extended it into a proactive outreach flow that confirms schedules via LLM tool-calling with auto-escalation to coaches.",
-        "Built a scalable Dagster pipeline to process 1,000+ student-coach transcripts into a compliant GCS bucket, applying LDA, BERTopic, and LLM-based extraction to surface recurring themes in student challenges.",
-      ],
-      media: [
-        {
-          type: "video" as const,
-          youtubeId: "zrPAAYbZT6Y",
-          caption: "Sam in the DMs — Campus AI Buddy",
-        },
-        {
-          type: "video" as const,
-          youtubeId: "MD009cPA7vI",
-          caption: "Student/coach transcript risk analysis",
-        },
-      ],
+      role: "Software Engineer",
+      dates: "2026 – 2026",
+      href: "https://campus.edu/",
+      logo: "/logos/campus.png",
     },
     {
       company: "Uthana",
-      tag: "Seed · A16Z",
-      role: "Product & Engineering Intern",
-      location: "Los Angeles, CA",
-      dates: "May 2025 – August 2025",
-      highlights: [
-        "Launched a live generative AI animation demo at SIGGRAPH 2025, viewed by 2,000+ game developers and ML researchers.",
-        "Built an automated Python workflow that processed and ranked 10K+ motion prompts using frequency and embedding-based cosine distance to generate monthly top-150 MoCap batches.",
-      ],
-      media: [
-        {
-          type: "video" as const,
-          youtubeId: "ouao2Pc6XTI",
-          caption: "SIGGRAPH 2025 — live real-time generative animation demo",
-        },
-      ],
+      role: "Product & Software Engineer",
+      dates: "2025 – 2025",
+      href: "https://www.uthana.com/",
+      logo: "/logos/uthana.png",
     },
     {
-      company: "Tamagotchi Lab, USC",
-      tag: "Viterbi School of Engineering",
-      role: "Undergraduate Student Researcher",
-      location: "Los Angeles, CA",
-      dates: "May 2024 – May 2026",
-      highlights: [
-        "Conducted ML/NLP interpretability research on how LLMs encode syntactic and semantic information, with applications to fairness-critical decision systems.",
-        "Co-authored a NeurIPS 2024 (CaLM) paper on GPT-2 causal reasoning across 144 attention heads using activation patching on 30K+ sentence pairs.",
-        "Co-authored research analyzing fairness and bias in LLM-based kidney allocation using real OPTN data.",
-      ],
+      company: "Tamagotchi Lab, USC Viterbi",
+      role: "ML/NLP",
+      dates: "2024 – 2026",
+      href: "https://arxiv.org/abs/2410.21353",
+      logo: "/logos/usc.png",
+    },
+  ],
+
+  involvements: [
+    {
+      org: "USC",
+      role: "Head Peer Academic Leader",
+      dates: "2023 – 2026",
+      logo: "/logos/usc.png",
+    },
+    {
+      org: "CASA",
+      role: "President",
+      dates: "2024 – 2026",
+      logo: "/logos/casa.png",
     },
   ],
 
   projects: [
     {
+      title: "Sam",
+      badge: "Campus",
+      description:
+        "Grew Campus's AI tutor from 50 → 350 daily active users with DMs, file upload, and assignment context.",
+      href: "https://youtu.be/zrPAAYbZT6Y",
+      image: "/images/sam-dm.png",
+    },
+    {
+      title: "Causal Interventions on Causal Paths",
+      badge: "CaLM @ NeurIPS",
+      description:
+        "Mapped GPT-2's causal reasoning from syntax to semantics across 144 attention heads.",
+      href: "https://arxiv.org/abs/2410.21353",
+      image: "/images/casual-reasoning.png",
+    },
+    {
       title: "The Intern",
-      subtitle: "Proactive AI Coding Agent",
+      badge: "Replit x a16z Hackathon",
       description:
-        "An always-on AI agent in Slack that triages Linear tickets, writes code on feature branches, opens draft GitHub PRs, and demos on Replit — powered by a multi-agent architecture on the Claude Agent SDK.",
-      tech: ["Replit", "Python", "Claude Agent SDK", "Slack API", "Linear", "GitHub API"],
-      highlights: [
-        "Continuous preview deployments via GitHub Actions — every agent-opened PR auto-deploys to a live *.replit.app URL.",
-        "Integrated Slack Socket Mode, Linear/GitHub MCP servers, and Perseus semantic code search for scoped subagent tool access.",
-      ],
-      demo: {
-        type: "video" as const,
-        youtubeId: "szILc1sSEG8",
-        label: "Watch Demo",
-      },
+        "Slack agent that triages Linear tickets, writes code, opens draft PRs, and demos on Replit.",
+      href: "https://youtu.be/szILc1sSEG8",
+      image: "https://img.youtube.com/vi/szILc1sSEG8/hqdefault.jpg",
     },
     {
-      title: "3D Interactive AI Companion",
-      subtitle: "Unity + OpenAI",
+      title: "3D AI Companion",
+      badge: "Personal",
       description:
-        "A 3D interactive AI companion in Unity with Blender-modeled animations, Microsoft Cognitive Services for speech, and OpenAI-powered dynamic conversation synced to character animations.",
-      tech: ["C#", "Unity", "Blender", "OpenAI API", "Microsoft Cognitive Services"],
-      highlights: [
-        "Full speech recognition, synthesis, and lip-synced character animations.",
-        "Dynamic conversational AI driving real-time 3D character behavior.",
-      ],
-      demo: {
-        type: "video" as const,
-        youtubeId: "4dw_R7ulc7Q",
-        label: "Watch Demo",
-      },
-    },
-  ],
-
-  research: [
-    {
-      title:
-        "Causal Interventions on Causal Paths: Mapping GPT-2's Reasoning From Syntax to Semantics",
-      venue: "CaLM @ NeurIPS 2024",
-      authors: "Isabelle Lee, Joshua Lum, Ziyi Liu, Dani Yogatama",
-      url: "https://arxiv.org/abs/2410.21353",
-      description:
-        "Characterized causal reasoning in GPT-2 small by analyzing cause-and-effect sentences, finding syntax localized in early layers and semantic sensitivity in later attention heads.",
+        "Unity companion with speech, lip-sync, and OpenAI conversation driving character animation.",
+      href: "https://youtu.be/4dw_R7ulc7Q",
+      image: "https://img.youtube.com/vi/4dw_R7ulc7Q/hqdefault.jpg",
     },
     {
-      title:
-        "Evaluating Large Language Models for Fair and Reliable Organ Allocation",
-      venue: "arXiv preprint",
-      authors:
-        "Brian Hyeongseok Kim, Hannah Murray, Isabelle Lee, Jason Byun, Joshua Lum, Dani Yogatama, Evi Micha",
-      url: "https://arxiv.org/html/2504.03716v2",
+      title: "Transcript Analysis",
+      badge: "Campus",
       description:
-        "Systematic evaluation of LLMs on kidney allocation using real OPTN data, revealing task-dependent demographic biases and the need for rigorous fairness metrics before clinical deployment.",
+        "Dagster pipeline over 1,000+ student-coach transcripts to surface risk themes with LDA, BERTopic, and LLMs.",
+      href: "https://youtu.be/MD009cPA7vI",
+      image: "https://img.youtube.com/vi/MD009cPA7vI/hqdefault.jpg",
     },
-  ],
-
-  skills: {
-    languages: ["Python", "PyTorch", "C++", "C#", "Go", "Java", "JavaScript", "TypeScript"],
-    frameworks: ["React", "Node.js", "Unity", "SQL", "Git"],
-    domains: ["AI / ML", "NLP", "Full-Stack", "Agent Systems", "Product"],
-  },
-
-  interests: ["Music", "Hiking", "Pickleball", "Spikeball", "Snowboarding", "Cycling", "Gaming"],
-
-  nav: [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Research", href: "#research" },
-    { label: "Contact", href: "#contact" },
+    {
+      title: "Fair Organ Allocation",
+      badge: "Research",
+      description:
+        "Evaluated LLMs for fair kidney allocation on real OPTN data.",
+      href: "https://arxiv.org/html/2504.03716v2",
+      image: "/images/organ.png",
+    },
   ],
 } as const;

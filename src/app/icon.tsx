@@ -13,14 +13,13 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          borderRadius: "50%",
-          background: "#09090b",
-          border: "2px solid #27272a",
-          color: "#fafafa",
+          borderRadius: "8px",
+          background: "#120315",
+          color: "#ffffff",
           fontSize: 14,
-          fontWeight: 600,
-          fontFamily: "ui-monospace, monospace",
-          letterSpacing: "-0.05em",
+          fontWeight: 700,
+          fontFamily: "system-ui, sans-serif",
+          letterSpacing: "-0.04em",
         }}
       >
         jl

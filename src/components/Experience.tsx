@@ -1,60 +1,44 @@
 import { site } from "@/data/site";
-import { SectionHeading } from "./SectionHeading";
-import { YouTubeEmbed } from "./YouTubeEmbed";
+import { FadeIn } from "./FadeIn";
 
 export function Experience() {
   return (
-    <section id="experience" className="px-6 py-24">
-      <div className="mx-auto max-w-5xl">
-        <SectionHeading title="Experience" subtitle="Where I've built and shipped" />
-
-        <div className="space-y-12">
-          {site.experience.map((job) => (
-            <div
-              key={job.company}
-              className="relative pl-8 before:absolute before:left-0 before:top-2 before:h-full before:w-px before:bg-zinc-800 last:before:hidden"
-            >
-              <div className="absolute left-0 top-2 h-2 w-2 -translate-x-[3px] rounded-full bg-red-500" />
-
-              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <h3 className="text-lg font-semibold text-zinc-100">{job.company}</h3>
-                <span className="font-mono text-xs text-red-500/80">{job.tag}</span>
-              </div>
-              <p className="mt-1 text-sm text-zinc-400">{job.role}</p>
-              <p className="text-sm text-zinc-600">
-                {job.location} · {job.dates}
-              </p>
-
-              <ul className="mt-4 space-y-2">
-                {job.highlights.map((h) => (
-                  <li key={h} className="flex gap-2 text-sm leading-relaxed text-zinc-400">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-600" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
-
-              {"media" in job && job.media && job.media.length > 0 && (
-                <div className="mt-6 space-y-6">
-                  {job.media.map((item) => (
-                    <div key={item.caption}>
-                      <YouTubeEmbed
-                        videoId={item.youtubeId}
-                        title={item.caption}
+    <section id="work">
+      <FadeIn>
+        <div className="space-y-4 pb-16 text-left">
+          <div className="text-2xl font-normal">Work</div>
+          <div className="space-y-0">
+            {site.work.map((job, i) => (
+              <FadeIn key={job.company} delay={i * 60}>
+                <a
+                  href={job.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
+                >
+                  <div className="flex items-center py-3">
+                    <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-md border border-black/10 bg-white">
+                      <img
+                        src={job.logo}
+                        alt={`${job.company} logo`}
+                        className="h-full w-full object-cover"
                       />
-                      {item.caption && (
-                        <p className="mt-2 text-center text-xs text-zinc-600">
-                          {item.caption}
-                        </p>
-                      )}
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-baseline gap-x-2">
+                        <span className="font-semibold">{job.company}</span>
+                        <span className="text-xs text-muted">{job.role}</span>
+                      </div>
+                    </div>
+                    <div className="shrink-0 text-sm text-muted">{job.dates}</div>
+                  </div>
+                </a>
+                <div className="border-b border-dashed border-ink" />
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
