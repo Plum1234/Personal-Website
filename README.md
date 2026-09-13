@@ -1,6 +1,6 @@
 # Joshua Lum
 
-Personal site — [joshualum.vercel.app](https://joshualum.vercel.app)
+Personal site — [joshlum.xyz](https://joshlum.xyz)
 
 ```bash
 npm install

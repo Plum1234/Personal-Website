@@ -4,7 +4,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/josh-lum",
   github: "https://github.com/Plum1234",
   resumeUrl: "/Lum_Joshua_Resume_Grad.pdf",
-  url: "https://joshualum.vercel.app",
+  url: "https://joshlum.xyz",
   description:
     "Software Strategy Group Associate at EY-Parthenon. 8VC Engineering Fellow. CS + Business @ USC.",
   footer: "信念",
@@ -116,7 +116,7 @@ export const site = {
       description:
         "Grew Campus's AI tutor from 50 → 350 daily active users with DMs, file upload, and assignment context.",
       href: "https://youtu.be/zrPAAYbZT6Y",
-      image: "/images/sam-dm.png",
+      image: "/images/sam-dm.jpg",
     },
     {
       title: "Causal Interventions on Causal Paths",
@@ -124,7 +124,7 @@ export const site = {
       description:
         "Mapped GPT-2's causal reasoning from syntax to semantics across 144 attention heads.",
       href: "https://arxiv.org/abs/2410.21353",
-      image: "/images/casual-reasoning.png",
+      image: "/images/causal-reasoning.png",
     },
     {
       title: "The Intern",
